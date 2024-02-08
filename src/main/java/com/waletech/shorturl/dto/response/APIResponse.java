@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-@Builder
 public class APIResponse<T>{
 
     private boolean hasError;
@@ -17,7 +16,7 @@ public class APIResponse<T>{
     private String time;
     private T data;
 
-    public APIResponse(boolean hasError, int statusCode, String message, String time, T data) {
+    public APIResponse(boolean hasError, int statusCode, String message, T data) {
         this.hasError = hasError;
         this.statusCode = statusCode;
         this.message = message;
