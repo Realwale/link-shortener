@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Builder
-public class UrlAPIResponse <T>{
+public class APIResponse<T>{
 
     private boolean hasError;
     private int statusCode;
@@ -17,7 +17,7 @@ public class UrlAPIResponse <T>{
     private String time;
     private T data;
 
-    public UrlAPIResponse(boolean hasError, int statusCode, String message, String time, T data) {
+    public APIResponse(boolean hasError, int statusCode, String message, String time, T data) {
         this.hasError = hasError;
         this.statusCode = statusCode;
         this.message = message;
